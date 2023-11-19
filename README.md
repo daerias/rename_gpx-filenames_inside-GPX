@@ -1,5 +1,7 @@
 # rename_gpx-filenames_inside-GPX
 
+# ACHTUNG: Ich bin nur ein Hobbyscripter und übernehme keine Haftung, wenn das Script eure GPX zerstört. Bitte macht ein Backup!
+
 ## GPX-Datei-Umbenennungsskript
 Dieses Python-Skript ist dafür konzipiert, GPX-Dateien umzubenennen und sie basierend auf dem Erfolg des Umbenennungsprozesses in entsprechende Ordner zu verschieben.
 
