@@ -3,7 +3,7 @@
 import os
 import glob
 import shutil
-from xml.etree import ElementTree as ET
+from lxml import etree as ET
 
 def rename_gpx_files():
     path = './GPX/*.gpx'
@@ -17,7 +17,8 @@ def rename_gpx_files():
 
     for file in files:
         try:
-            tree = ET.parse(file)
+            parser = ET.XMLParser(remove_blank_text=True)
+            tree = ET.parse(file, parser)
             root = tree.getroot()
 
             # Get filename without extension
@@ -29,7 +30,7 @@ def rename_gpx_files():
                     elem.text = filename
 
             # Write changes back to the file
-            tree.write(file)
+            tree.write(file, pretty_print=True)
 
             # Verschiebe die erfolgreich umbenannte Datei in den "done"-Ordner
             shutil.move(file, './done/' + os.path.basename(file))
