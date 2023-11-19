@@ -1,5 +1,4 @@
 # Dateiname: rename_gpx-filenames_inside-GPX.py
-
 import os
 import glob
 import shutil
